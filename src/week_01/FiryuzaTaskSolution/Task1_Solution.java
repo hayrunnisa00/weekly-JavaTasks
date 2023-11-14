@@ -1,4 +1,4 @@
-package week_01;
+package week_01.FiryuzaTaskSolution;
 
 public class Task1_Solution {
     public static void main(String[] args) {
