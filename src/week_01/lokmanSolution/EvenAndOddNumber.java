@@ -1,4 +1,4 @@
-package week_01;
+package week_01.lokmanSolution;
 
 public class EvenAndOddNumber {
 
