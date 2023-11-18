@@ -1,0 +1,7 @@
+Swap Number
+Swap two variable values without using a third variable
+
+Divisible 3, 5, 15
+
+print consecutive numbers
+
