@@ -28,7 +28,7 @@ public class CodilityTestCoders {
         for (int i = 1; i <= n ; i++) {
 
             if (i%2!=0 && i%3!=0 && i%5!=0){
-                result += "" + i;
+                result +=  i;
             }
             if (i % 2 == 0) {
                 result += divisible2;
