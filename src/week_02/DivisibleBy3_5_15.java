@@ -23,7 +23,6 @@ public class DivisibleBy3_5_15 {
         System.out.println("Divisible by 5: "+divisibleBy5);
         System.out.println("Divisible by 3: "+divisibleBy3);
 
-
     }
 
 }
