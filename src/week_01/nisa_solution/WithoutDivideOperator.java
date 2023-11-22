@@ -24,6 +24,14 @@ public class WithoutDivideOperator {
     }
 
 
+/*
+10/ 2 = 5
 
+10 - 2 = 8
+8 - 2 = 6
+6 - 2 = 4
+4 - 2 = 2
+2 - 2 = 0
+ */
 
 }
