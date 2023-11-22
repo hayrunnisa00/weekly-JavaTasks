@@ -20,8 +20,8 @@ public class DivisibleNum {
 
         }
         System.out.println( result15);
-        System.out.println(result3);
         System.out.println(result5);
+        System.out.println(result3);
 
     }
 }
