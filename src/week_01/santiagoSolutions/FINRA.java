@@ -2,25 +2,26 @@ package week_01.santiagoSolutions;
 
 public class FINRA {
     public static void main(String[] args) {
-
+        String result = "";
 
         for (int i = 1; i <= 30; i++) {
 
-            String result = "";
+
 
             if (i%3==0 & i%5==0) {// for numbers which are a multiple of both 3 and 5, print "FINRA" instead of the number
-                result="FINRA";
+                result+="FINRA ";
             }else if (i%3==0) { //  for numbers which are a multiple of 3 print "FIN" instead of the number
-                result="FIN";
+                result+="FIN ";
             }else if (i%5==0){ //for numbers which are a multiple of 5, print "RA" instead of the number.
-                result="RA";
+                result+="RA ";
             } else { // any number that's nor in the last conditions jusrt print the number
-                result=i+"";
+                result+=i+" ";
             }
 
-            System.out.print(result+" ");
+
         }
 
+        System.out.print(result+" ");
     }
 }/*
 FINRA :
