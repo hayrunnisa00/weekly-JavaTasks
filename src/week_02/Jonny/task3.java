@@ -10,7 +10,7 @@ public class task3 {
 String result ="";
         for (int i = 1; i <= n; i++) {
             if((i%2!=0 && i%3!=0 && i%5!=0)){
-                result+=i + "\n";
+                result+=i;
             }
 if(i%2==0) {
     result += "Codility";
