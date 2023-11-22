@@ -1,4 +1,4 @@
-package week_02;
+package week_02.LokmanSolution;
 
 public class DivisibleBy3_5_15 {
 
