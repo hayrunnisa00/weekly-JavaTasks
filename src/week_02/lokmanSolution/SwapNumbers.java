@@ -1,4 +1,4 @@
-package week_02;
+package week_02.lokmanSolution;
 
 public class SwapNumbers {
 
