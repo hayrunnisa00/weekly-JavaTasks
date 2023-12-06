@@ -13,7 +13,7 @@ public class FrequencyCharacters {
 
     }
 
-    private static String frequencyCharacter(String str) {
+    public static String frequencyCharacter(String str) {
 
         String result = "";
 
