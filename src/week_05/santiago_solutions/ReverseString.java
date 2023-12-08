@@ -9,21 +9,11 @@ public class ReverseString {
         //Ex: Reverse("ABCD"); ==> DCBA
         System.out.println("reverseString(\"ABCD\") = " + reverseString("ABCD"));
 
+        reverseString2("ABCD");
+
     }
 
-   /* public static String reverseString2(String str) {
-        List<String> arrayListString = new ArrayList<>(Arrays.asList(str.split("")));
-
-        Deque<String> stackString = new LinkedList<>();
-        stackString.addAll(arrayListString);
-
-        (Stack<String>)arrayListString.poll();
-
-
-
-    }*/
     public static String reverseString(String str) {
-
 
         String reverseResult = "";
 
@@ -34,6 +24,28 @@ public class ReverseString {
         return reverseResult;
 
     }
+
+   public static void reverseString2(String str) {
+
+        List<String> arrayListString = new ArrayList<>(Arrays.asList(str.split("")));
+
+        Stack<String> stackString = new Stack<>();
+        for (String each : arrayListString) {
+            stackString.push(each);
+        }
+
+        List<String> reverseString = new ArrayList<>();
+
+        //size of reverseString :4 coz -->stackString.size()//4
+        reverseString.add(stackString.pop());
+        reverseString.add(stackString.pop());
+        reverseString.add(stackString.pop());
+        reverseString.add(stackString.pop());
+
+        System.out.println(reverseString);
+
+    }
+
 
 }
 //String -- Reverse
