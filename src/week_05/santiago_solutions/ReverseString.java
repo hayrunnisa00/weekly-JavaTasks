@@ -17,7 +17,7 @@ public class ReverseString {
 
         String reverseResult = "";
 
-        for (int i = str.length()-1; i >= 0; i--) {
+        for (int i = str.length()-1; i >= 0; i--) { // Reverse Loop
             reverseResult += str.charAt(i);
         }
 
@@ -30,17 +30,19 @@ public class ReverseString {
         List<String> arrayListString = new ArrayList<>(Arrays.asList(str.split("")));
 
         Stack<String> stackString = new Stack<>();
+
         for (String each : arrayListString) {
-            stackString.push(each);
+            stackString.push(each); // A B C D
         }
 
         List<String> reverseString = new ArrayList<>();
 
         //size of reverseString :4 coz -->stackString.size()//4
-        reverseString.add(stackString.pop());
-        reverseString.add(stackString.pop());
-        reverseString.add(stackString.pop());
-        reverseString.add(stackString.pop());
+        reverseString.add(stackString.pop());// D
+        reverseString.add(stackString.pop());//C
+        reverseString.add(stackString.pop());//B
+        reverseString.add(stackString.pop());//A
+
 
         System.out.println(reverseString);
 
