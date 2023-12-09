@@ -28,14 +28,9 @@ public class FindUniqueCharacters {
 
         for (int i = 0; i < list.size(); i++) {
 
-            for (int j = 0; j < list.size(); j++) {
-
                 if (list.get(i).equals(list.get(i))) {
                     count = Collections.frequency(list, list.get(i));
-
                 }
-
-            }
 
             if (count == 1) {
                 result += list.get(i);
