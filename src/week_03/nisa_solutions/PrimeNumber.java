@@ -10,6 +10,7 @@ public class PrimeNumber {
         primeNumber(1217);
         primeNumber(1218);
         primeNumber(17);
+        primeNumber(78);
     }
 
     private static void primeNumber(int num) {
