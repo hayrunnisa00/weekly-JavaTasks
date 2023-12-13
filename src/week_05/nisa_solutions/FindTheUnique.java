@@ -1,5 +1,7 @@
 package week_05.nisa_solutions;
 
+import week_04.nisa_solutions.FrequencyCharacters;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -11,6 +13,9 @@ public class FindTheUnique {
         String str = "AAABBBCCCDEF";
 
         System.out.println(uniqueChar(str));
+        System.out.println(uniqueChar2(str));
+
+
 
     }
 
@@ -31,6 +36,26 @@ public class FindTheUnique {
         return result;
 
     }
+
+
+    public static String uniqueChar2(String str){
+
+        String uniq = "";
+        String word = FrequencyCharacters.frequencyCharacter(str);
+
+        for (int i = 0; i < word.length(); i++) {
+
+            if (word.charAt(i) == '1'){
+
+                uniq += word.substring(i-1, i);
+
+            }
+
+        }
+        return uniq;
+    }
+
+
 
 }
 
