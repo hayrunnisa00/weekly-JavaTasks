@@ -1,9 +1,6 @@
 package week_06.santiago_solutions;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.TreeSet;
+import java.util.*;
 
 public class MaxNumArray {
 
@@ -54,19 +51,22 @@ public class MaxNumArray {
 
     public static int maxNum3(int[] arr) {
 
-
-        TreeSet<Integer> treeSet = new TreeSet<>();
+        TreeSet<Integer> treeSet = new TreeSet<>(); // TreeSet is a child of Set interface , sorts the elements in ascending order
 
         for (int i = 0; i < arr.length; i++) {
 
-            treeSet.add(Integer.valueOf(arr[i]));
+            treeSet.add(Integer.valueOf(arr[i])); // We need to add the elements as non-primitive data type, that's why we use Integer.valueOf
 
         }
 
-        ArrayList<Integer> arrayList = new ArrayList<>(treeSet);
+                    //We need to use the get method from ArrayList, to do so we call the constructor of arrayList
+       return new ArrayList<>(treeSet).get(treeSet.size() - 1);
 
 
-        return arrayList.get(arrayList.size()-1);
+        /*ArrayList<Integer> arrayList = new ArrayList<>(treeSet);
+
+
+        return arrayList.get(arrayList.size()-1);*/
 
     }
 }

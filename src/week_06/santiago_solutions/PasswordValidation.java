@@ -1,7 +1,5 @@
 package week_06.santiago_solutions;
 
-import javax.swing.table.TableRowSorter;
-
 //String -- Password Validation
 // Task 1. Write a return method that can verify if a password is valid or not. requirements:
 // 1. Password MUST be at least have 6 characters and should not contain space
@@ -18,8 +16,8 @@ public class PasswordValidation {
 
         String noValidPassword = "Pas";
 
-        System.out.println("passwordValidation1(validPassword) = " + passwordValidation1(validPassword));
-        System.out.println("passwordValidation1(noValidPassword) = " + passwordValidation1(noValidPassword));
+        System.out.println("validPassword1(validPassword) = " + validPassword1(validPassword));
+        System.out.println("validPassword1(noValidPassword) = " + validPassword1(noValidPassword));
 
         System.out.println("==========================================");
 
@@ -27,37 +25,8 @@ public class PasswordValidation {
         System.out.println("validPassword2(noValidPassword) = " + validPassword2(noValidPassword));
     }
 
-    public static boolean validPassword2(String password) {
 
-        //I'm going to use the Character class and its methods ( isDigit, isLowerCase, isUpperCase, isSpecialChar
-
-        //I need to iterate each ch in the String, but first I have to convert the string into Character
-
-        boolean hasNotSpaces = !password.contains(" ");
-        boolean has6Characters = password.length()>=6;
-        boolean hasUpperCase = false;
-        boolean hasLowerCase = false;
-        boolean hasSpecialCh=false;
-        boolean hasDigit = false;
-
-            for (char each : password.toCharArray()) {
-
-                    if (Character.isUpperCase(each)) {
-                        hasUpperCase = true;
-                    } else if (Character.isLowerCase(each)) {
-                        hasLowerCase = true;
-                    } else if (Character.isDigit(each)) {
-                        hasDigit = true;
-                    } else if (!Character.isLetterOrDigit(each)) {
-                        hasSpecialCh = true;
-                    }
-                }
-
-        return hasUpperCase && hasLowerCase && hasDigit && hasSpecialCh && hasNotSpaces && has6Characters;
-    }
-
-
-    public static boolean passwordValidation1(String password) {
+    public static boolean validPassword1(String password) {
 
         boolean hasSpecialCh=false;
         boolean hasUpperCase = false;
@@ -86,6 +55,35 @@ public class PasswordValidation {
 
         return hasUpperCase && hasLowerCase && hasDigit && hasSpecialCh;
 
-    }
+    } // ASCCI table solution and for Loop
+
+    public static boolean validPassword2(String password) {
+
+        //I'm going to use the Character class and its methods ( isDigit, isLowerCase, isUpperCase, isSpecialChar
+
+        //I need to iterate each ch in the String, but first I have to convert the string into Character
+
+        boolean hasNotSpaces = !password.contains(" ");
+        boolean has6Characters = password.length()>=6;
+        boolean hasUpperCase = false;
+        boolean hasLowerCase = false;
+        boolean hasSpecialCh=false;
+        boolean hasDigit = false;
+
+        for (char each : password.toCharArray()) {
+
+            if (Character.isUpperCase(each)) {
+                hasUpperCase = true;
+            } else if (Character.isLowerCase(each)) {
+                hasLowerCase = true;
+            } else if (Character.isDigit(each)) {
+                hasDigit = true;
+            } else if (!Character.isLetterOrDigit(each)) {
+                hasSpecialCh = true;
+            }
+        }
+
+        return hasUpperCase && hasLowerCase && hasDigit && hasSpecialCh && hasNotSpaces && has6Characters;
+    } // Character class methods and ForEach Loop
 
 }
