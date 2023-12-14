@@ -1,4 +1,4 @@
-package week_06;
+package week_06.santiago_solutions;
 
 import javax.swing.table.TableRowSorter;
 
