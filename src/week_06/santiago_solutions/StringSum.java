@@ -25,7 +25,8 @@ public class StringSum {
         for (char each : str.toCharArray()) { // We use forEach loop to get each element inside the String
 
             if (Character.isDigit(each)) { // We use isDigit method from Character class
-                sum += each-48; // if it's true we will add the character as a num( we need to rest 48 because the number returning is from the ASCII table)
+                sum += each-48;// if it's true we will add the character as a num( we need to rest 48 because the number returning is from the ASCII table)
+
             }
         }
 
