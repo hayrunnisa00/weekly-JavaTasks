@@ -86,4 +86,27 @@ public class PasswordValidation {
         return hasUpperCase && hasLowerCase && hasDigit && hasSpecialCh && hasNotSpaces && has6Characters;
     } // Character class methods and ForEach Loop
 
+
+    //Nissa Solution
+    public static boolean verifyPassword(String password) {
+
+        boolean validPassword = false;
+
+        if (password.length() >= 6 && !password.contains(" ")) {
+
+            for (int i = 0; i < password.length(); i++) {
+
+                char ch = password.charAt(i);
+
+                if (Character.isUpperCase(ch) || Character.isLowerCase(ch) || !Character.isLetterOrDigit(ch) || Character.isDigit(ch)) {
+                    validPassword = true;
+                }
+
+
+            }
+
+        }
+        return validPassword;
+
+    }
 }
