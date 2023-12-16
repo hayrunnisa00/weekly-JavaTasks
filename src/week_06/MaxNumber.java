@@ -6,9 +6,7 @@ public class MaxNumber {
 
         int[] arr = {5,10,78,62,61,2,5};
         maxNum(arr);
-
     }
-
 
     public static void maxNum(int[] arr){
 
