@@ -34,7 +34,8 @@ public class MaxNumArray {
 
     public static int maxNum2(int[] arr) {
 
-        Integer[] arrInteger = new Integer[arr.length];
+
+        Integer[] arrInteger = new Integer[arr.length]; // arrays Integer
 
         for (int i = 0; i < arrInteger.length; i++) {
 
@@ -42,7 +43,7 @@ public class MaxNumArray {
 
         }
 
-        ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(arrInteger));
+        ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(arrInteger)); // Collection
 
         return Collections.max(arrayList);
 
@@ -68,5 +69,11 @@ public class MaxNumArray {
 
         return arrayList.get(arrayList.size()-1);*/
 
+    }
+
+    //Van Solution
+    public static int maxNumb4(int[] arr) {
+        Arrays.sort(arr);
+        return arr[arr.length - 1];
     }
 }
