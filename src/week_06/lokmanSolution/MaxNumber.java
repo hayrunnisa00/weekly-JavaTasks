@@ -1,4 +1,4 @@
-package week_06;
+package week_06.lokmanSolution;
 
 public class MaxNumber {
 
