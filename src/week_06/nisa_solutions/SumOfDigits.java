@@ -11,7 +11,7 @@ public class SumOfDigits {
 
     }
 
-    private static int sumDigit(String word) {
+    public static int sumDigit(String word) {
 
         int sum = 0;
 
