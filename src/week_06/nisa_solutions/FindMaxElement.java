@@ -1,5 +1,6 @@
 package week_06.nisa_solutions;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class FindMaxElement {
@@ -7,11 +8,18 @@ public class FindMaxElement {
 
         int[] arr = {3000, 6, 888, 12, 78, 90, 34, 27};
 
-        System.out.println("Max Element = " + maxElement(arr));
+        System.out.println("Max Element Method1 = " + maxElement1(arr));
+        System.out.println("Max Element Method2 = " + maxElement2(arr));
 
     }
 
-    private static int maxElement(int[] arr) {
+    public static int maxElement1(int[] arr){
+        Arrays.sort(arr);
+        return arr[arr.length-1];
+    }
+
+
+    public static int maxElement2(int[] arr) {
 
         int max = Integer.MIN_VALUE;
 
@@ -22,6 +30,8 @@ public class FindMaxElement {
         }
         return max;
     }
+
+
 
 }
 
