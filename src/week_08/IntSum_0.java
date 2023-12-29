@@ -3,39 +3,60 @@ package week_08;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class IntSum_0 {
 
+
+
     public static void main(String[] args) {
+        int n = 5;
+        int[] resultArray = createArrayWithZeroSum(n);
 
-        arrSum_0(3);
+        System.out.print("Result array: [");
+        for (int i = 0; i < n; i++) {
+            System.out.print(resultArray[i]);
+            if (i < n - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
 
+        int sum = 0;
+        for (int value : resultArray) {
+            sum += value;
+        }
+        System.out.println("Sum of the elements: " + sum);
     }
 
-    public static void arrSum_0(int n) {
 
-        ArrayList<Integer> list = new ArrayList<>();
+    //This was ChatGPT
+    public static int[] createArrayWithZeroSum(int n) {
+        int[] array = new int[n];
 
-        if (n >= 1 && n <= 100) {
-
-            if (list.size() < n) {
-
-                if (Integer.sum(n, n) == 0) {
-
-                    for (int i = 0; i < n; i++) {
-
-                        list.add(i);
-
-                    }
-                }
-
+        if (n % 2 == 0) {
+            // If n is even, fill the array with n/2 positive numbers
+            for (int i = 0; i < n / 2; i++) {
+                array[i] = i + 1;               // Positive numbers
+                array[n - 1 - i] = -(i + 1);    // Corresponding negative numbers
             }
-
+        } else {
+            // If n is odd, fill the array with (n-1)/2 positive numbers
+            for (int i = 0; i < (n - 1) / 2; i++) {
+                array[i] = i + 1;               // Positive numbers
+                array[n - 1 - i] = -(i + 1);    // Corresponding negative numbers
+            }
+            // Set the middle element to 0
+            array[n / 2] = 0;
         }
 
-        System.out.println(list);
+        return array;
     }
-}
+
+    }
+
+
+
 // Array - N unique integers that sum up to 0
 //
 // Write a function that given an integer N (1 < N < 100), returns an array
