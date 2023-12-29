@@ -1,4 +1,4 @@
-package week_08;
+package week_08.santi_solutions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
