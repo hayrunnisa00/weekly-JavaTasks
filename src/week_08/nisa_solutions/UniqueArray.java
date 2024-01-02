@@ -1,55 +1,43 @@
 package week_08.nisa_solutions;
 
+import java.util.*;
+
 public class UniqueArray {
     public static void main(String[] args) {
 
-        int[] arr = {1, 0, -3, 2};
-        System.out.println("(arr) = " + uniqueArray(arr, 4));  // true
-
-        int[] arr1 = {1, 0, -3, 2};
-        System.out.println("(arr1) = " + uniqueArray(arr1, 5));  // false
-
-        int[] arr2 = {1, -1,1,3};
-        System.out.println("(arr2) = " + uniqueArray(arr2, 4));  // false
-
-        int[] arr3 = {1, 0, -1};
-        System.out.println("(arr3) = " + uniqueArray(arr3, 3)); // true
-
-        System.out.println("(arr3) = " + uniqueArray(arr3, 4)); // false
+        int num = 4;
+        System.out.println(Arrays.toString(uniqueArray(num)));
 
 
     }
 
-    private static boolean uniqueArray(int[] arr, int N) {
+    private static int[] uniqueArray(int n) {
 
-        boolean isUnique = false;
+        int[] arr = new int[n];
+        ArrayList<Integer> usedNum = new ArrayList<>();
+
+        Random random = new Random();
+        int randomNum;
         int sum = 0;
-        int frequency = 0;
 
-        if (arr.length == N) {
 
-            for (int i = 0; i < arr.length; i++) {
-                sum += arr[i];
-
-                for (int j = 0; j < arr.length; j++) {
-
-                    if (arr[i] == arr[j]){
-                        frequency ++;
-                    }
-                    if (frequency > 1){
-                        isUnique = false;
-                        break;
-                    }
-                }
-
-                if (sum == 0){
-                    isUnique = true;
-                }
-
+        for (int i = 0; i < arr.length-1; i++) {
+            do {
+                randomNum = random.nextInt(10)-5;  // range --> (-5 ~ 5)
             }
-        }
-        return isUnique;
+           while (usedNum.contains(randomNum));
+               usedNum.add(randomNum);
+               arr[i] = usedNum.get(i);
+               sum += arr[i];
 
+               if (usedNum.contains(-sum)){
+                   arr[i] = random.nextInt(10)-5;
+               }
+        }
+
+        arr[arr.length-1] = -sum;
+
+       return arr;
     }
 
 
