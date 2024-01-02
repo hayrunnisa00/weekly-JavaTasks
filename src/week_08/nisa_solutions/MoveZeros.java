@@ -13,21 +13,21 @@ public class MoveZeros {
 
     }
 
-    private static String[] moveZeroEnd(int[] arr) {
+    private static int[] moveZeroEnd(int[] arr) {
 
-        String zero = "";
-        String number = "";
+        int[] zeroEnd = new int[arr.length];
 
-        for (int i = 0; i < arr.length-1; i++) {
+        int j = 0;
+        for (int i = 0; i < arr.length; i++) {
 
-            if (arr[i] == 0){
-                zero += arr[i];
-            }else {
-                number += arr[i];
+            if (arr[i] > 0){
+                zeroEnd[j] = arr[i];
+                j++;
             }
 
         }
 
-        return (number+zero).split("");
+
+        return zeroEnd;
     }
 }
