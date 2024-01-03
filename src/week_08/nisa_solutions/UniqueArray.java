@@ -16,7 +16,7 @@ public class UniqueArray {
         int[] arr = new int[n];
         ArrayList<Integer> usedNum = new ArrayList<>();
 
-        Random random = new Random();
+        Random random = new Random();  // 0 ~ 10
         int randomNum;
         int sum = 0;
 
