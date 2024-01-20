@@ -1,4 +1,4 @@
-package Week_04;
+package week_04.lokman_solutions;
 
 import java.util.ArrayList;
 import java.util.Arrays;

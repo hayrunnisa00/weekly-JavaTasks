@@ -1,7 +1,4 @@
-package week_06.NoName;
-
-import java.util.*;
-import java.util.function.Predicate;
+package week_06.lokman_solutions;
 
 public class PasswordValidationTaks {
     /*

@@ -1,6 +1,4 @@
-package week_06.NoName;
-
-import java.util.Arrays;
+package week_06.lokman_solutions;
 
 public class SumOfDigit {
     /*
