@@ -1,4 +1,4 @@
-package Week_04;
+package week_04.lokman_solutions;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;
