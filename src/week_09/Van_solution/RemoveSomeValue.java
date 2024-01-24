@@ -1,4 +1,4 @@
-package week_09.Van_soluiton;
+package week_09.Van_solution;
 
 import java.util.ArrayList;
 import java.util.Arrays;

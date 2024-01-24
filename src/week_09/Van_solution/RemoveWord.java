@@ -1,4 +1,4 @@
-package week_09.Van_soluiton;
+package week_09.Van_solution;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,7 +24,7 @@ String name="Ahmed";
         return names;
     }
     public static List<String> removeName1(List<String> names, String name){
-        names.removeIf(k->k.equals("Ahmed"));
+        names.removeIf(k->k.equals(name));
 
         return names;
     }
