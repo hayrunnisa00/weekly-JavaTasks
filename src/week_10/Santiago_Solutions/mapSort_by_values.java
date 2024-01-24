@@ -7,13 +7,13 @@ public class mapSort_by_values {
     public static void main(String[] args) {
 
         Map<String, Integer> map = new HashMap<>();
-        map.put("One", 3);
-        map.put("Two", 7);
-        map.put("Three", 2);
-        map.put("Four", 1);
-        map.put("Five", 4);
-        map.put("Six", 5);
-        map.put("Seven", 6);
+        map.put("three", 3);
+        map.put("seven", 7);
+        map.put("two", 2);
+        map.put("one", 1);
+        map.put("four", 4);
+        map.put("five", 5);
+        map.put("six", 6);
 
         sortMap(map);
 
@@ -23,15 +23,31 @@ public class mapSort_by_values {
     //Using TreeSet , simple answer, to cast I use construct of the ArrayList to use the get()
     private static void sortMap(Map<String,Integer> map) {
 
-        Set<String> keys = map.keySet(); // {"One","Two","Three",....}
-        Set<Integer> valuesSorted = new TreeSet<>(map.values());// {1,2,3,4,5,....}--> TreeSet will sorted by default
+        List<Map.Entry<String,Integer>> listMap = new ArrayList<>(map.entrySet());
 
-        for (int i = 0; i < map.size(); i++) {
+        for (int i = 0; i < listMap.size(); i++) {
 
-            map.replace(new ArrayList<>(keys).get(i), new ArrayList<>(valuesSorted).get(i));
+            for (int j = 0; j < listMap.size()-1; j++) {
+
+                if (listMap.get(j).getValue() > listMap.get(j + 1).getValue()) {
+
+                    Map.Entry<String, Integer> swap = listMap.get(j);
+                    listMap.set(j, listMap.get(j + 1));
+                    listMap.set(j + 1, swap);
+
+                }
+
+            }
         }
 
-        System.out.println(map);
+        Map<String, Integer> mapSorted = new LinkedHashMap<>();
+
+        for (Map.Entry<String, Integer> each : listMap) {
+
+            mapSorted.put(each.getKey(), each.getValue());
+        }
+
+        System.out.println(mapSorted);
     }
 
 
