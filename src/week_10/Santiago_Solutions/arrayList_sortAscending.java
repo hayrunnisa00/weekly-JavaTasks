@@ -8,35 +8,36 @@ public class arrayList_sortAscending {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> arrList1 = new ArrayList<>(Arrays.asList(2,2,1,10, 1, 20, 30, 2, 3, 4, 5, 50, 40));
-
-        int frequency = Collections.frequency(arrList1, 2);
-        System.out.println(frequency);
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(10, 9, 8, 7, 20, 1, 52, 3, 5, 9, 10,5,5));
 
 
-        arraySortAsc(arrList1);
+        System.out.println(arraySortAsc3(list));
+
+        arraySortAsc1(list);
+
+        //arraySortAsc2(list);
 
 
-        arraySortAsc2(arrList1);
-
-        arraySortAsc3(arrList1);
 
 
     }
 
 
-    private static void arraySortAsc(ArrayList<Integer> arrayList) {
 
-        Set<Integer> setlist =new TreeSet<>(); // create a TreeSet collection
-        setlist.addAll(arrayList);// add all the arraylist to this TreeSet, it will sort it out by default
+    //Using TreeSet Collection DataStructure -- it only  works with unique value doesn't accept duplicates
+    private static void arraySortAsc1(ArrayList<Integer> arrayList) {
+
+        Set<Integer> setlist = new TreeSet<>(arrayList); // create a TreeSet collection
 
         arrayList.clear();// we clear the all arrayList to reuse it
+
         arrayList.addAll(setlist);// we add the TreeSet collection to the empty arrayList
 
         System.out.println(arrayList); // We just print it to see the result
 
     }
 
+    //ArrayList and forEach loop -> contains methods and if condition-- Doesn't allow duplicates values
     private static void arraySortAsc2(ArrayList<Integer> arrayList) {
 
         ArrayList<Integer> arrayListSorted = new ArrayList<>();
@@ -49,42 +50,39 @@ public class arrayList_sortAscending {
 
                     if (!arrayListSorted.contains(each2)) {
                         arrayListSorted.add(each2);
+
                     }
 
                 }
 
-                }
-
             }
+
+        }
 
         System.out.println(arrayListSorted);
-        }
+    }
 
 
-   private static void arraySortAsc3(ArrayList<Integer>list) {
+    // Two for loops and allows duplicates, Best answer to this problem
+    public static ArrayList<Integer> arraySortAsc3(ArrayList<Integer> list) {
 
-        ArrayList<Integer> listSorted = new ArrayList<>();
-
-       int minValue = Integer.MAX_VALUE;
-
-        for (int i = 0; i < list.size(); i++) { //2,2,1,10, 1, 20, 30, 2, 3, 4, 5, 50, 40
-
-            for (int j = 0; j < list.size(); j++) {// 2,2,1,10, 1, 20, 30, 2, 3, 4, 5, 50, 40
-
-                if (list.get(j)< minValue ) {
-
-                    minValue = list.get(j);
-
-                    }
+        for (int i = 0; i < list.size() ; i++) {
+            for (int j = 0; j < list.size() -1; j++) {
+                if (list.get(j) > list.get(j + 1)) {
+                    // Swap arr[j] and arr[j + 1]
+                    Integer temp = list.get(j);
+                    list.set(j, list.get(j + 1));
+                    list.set(j+1, temp);
+                    //arr[j + 1] = temp;
                 }
-            listSorted.add(minValue);
-
             }
-
-        System.out.println(listSorted);
         }
+
+        return list;
 
     }
+
+}
 
 
 
