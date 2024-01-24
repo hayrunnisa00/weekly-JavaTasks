@@ -12,6 +12,7 @@ public class Sort_Descending {
     public static void main(String[] args) {
         int[] arr = {10, 9, 8, 7, 20, 1, 52, 3, 5, 9, 10};
         System.out.println(Arrays.toString(sortDescending(arr)));
+
     }
 
     public static int[] sortDescending(int[] arr) {
