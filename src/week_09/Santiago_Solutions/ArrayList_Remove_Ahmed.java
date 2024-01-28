@@ -48,16 +48,12 @@ public class ArrayList_Remove_Ahmed {
     public static void removeName3(List<String> listOfNames , String nameToRemove) {
 
         for (String each : listOfNames) {
-
             listOfNames.remove(each.equalsIgnoreCase(nameToRemove));
         }
 
         System.out.println(listOfNames);
 
     }
-
-
-
 
 }
 
