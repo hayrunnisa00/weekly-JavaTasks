@@ -12,7 +12,7 @@ public class MinValueInMap {
         mapList.put("g", 6);
         mapList.put("h", 9);
         mapList.put("e", 11);
-        mapList.put("i", 34);
+        mapList.put("i", 3);
         mapList.put("l", 45);
         mapList.put("r", 12);
 
